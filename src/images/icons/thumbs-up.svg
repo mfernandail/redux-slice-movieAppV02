@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   aria-hidden="true"
+   focusable="false"
+   data-prefix="fas"
+   data-icon="thumbs-up"
+   class="svg-inline--fa fa-thumbs-up fa-w-16"
+   role="img"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="thumbs-up.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.99298784"
+     inkscape:cx="212.99354"
+     inkscape:cy="185.29935"
+     inkscape:window-width="1920"
+     inkscape:window-height="1000"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="currentColor"
+     d="M 124.55837,193.58212 H 44.558371 c -13.255,0 -23.999999,10.745 -23.999999,24 v 240 c 0,13.255 10.744999,24 23.999999,24 h 79.999999 c 13.255,0 24,-10.745 24,-24 v -240 c 0,-13.255 -10.745,-24 -24,-24 z M 387.43832,74.196541 c 0,42.415999 -25.97,66.207999 -33.277,94.547999 h 101.723 c 33.397,0 59.397,27.746 59.553,58.098 0.084,17.938 -7.546,37.249 -19.439,49.197 l -0.11,0.11 c 9.836,23.337 8.237,56.037 -9.308,79.469 8.681,25.895 -0.069,57.704 -16.382,74.757 4.298,17.598 2.244,32.575 -6.148,44.632 -20.41,29.324 -70.996,29.737 -113.773,29.737 l -2.845,-10e-4 c -48.287,-0.017 -87.806,-17.598 -119.56,-31.725 -15.957,-7.099 -36.821,-15.887 -52.651,-16.178 -6.54,-0.12 -11.783,-5.457 -11.783,-11.998 v -213.77 c 0,-3.2 1.282,-6.271 3.558,-8.521 39.614,-39.144 56.648,-80.587 89.117,-113.111 14.804,-14.831999 20.188,-37.235999 25.393,-58.901999 4.447,-18.500999 13.749,-57.793999 33.932,-57.793999 24,0 72,7.99999999 72,81.451999 z"
+     id="path2"
+     sodipodi:nodetypes="sssssssssscscccccccsscsscccss"
+     style="fill:#bb27ff;fill-opacity:1" />
+</svg>

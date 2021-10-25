@@ -1,0 +1,44 @@
+:root {
+  --primary-color: #261C2C;
+  --secondary-color: #3E2C41;
+  --font-primary: #ffffff;
+  --font-secondary: #3C8DAD;
+
+  /* --primary-color: #0f171e;
+  --secondary-color: #1a242f;
+  --font-primary: #ffffff;
+  --font-secondary: #79b8f3;  */
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: local('Roboto Slab'), url('./fonts/roboto-slab-v16-latin-regular.woff2') format('woff2'), 
+       local('Roboto Slab'), url('./fonts/roboto-slab-v16-latin-regular.woff') format('woff');       
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu'), url('./fonts/ubuntu-v15-latin-regular.woff2') format('woff2'), 
+       local('Ubuntu'), url('./fonts/ubuntu-v15-latin-regular.woff') format('woff');       
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  /* background: var(--primary-color); */
+  background-image: url('./images/Sprinkle.svg');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab';
+}
+
+a {
+  text-decoration: none;  
+}
