@@ -6,7 +6,13 @@ import { InputSearch } from '../../components/inputSearch/InputSearch';
 import { Spinner } from '../../components/Spinner/Spinner';
 
 export const Home = () => {
+  const dispatch = useDispatch();
   const data = useSelector(getAllMovies);
+
+  useEffect(() => {
+    dispatch(fetchMoviesAsync());
+    dispatch(fetchSeriesAsync())
+  }, []);
 
   return (
     <>
@@ -15,7 +21,8 @@ export const Home = () => {
         Object.keys(data).length === 0
         ? <Spinner />
         : <ShowListening />
-      }      
+      }
+      
     </>
   )
 }

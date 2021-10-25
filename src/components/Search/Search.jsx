@@ -13,16 +13,14 @@ export const Search = () => {
   const data = useSelector(getAllMovies);
 
   const searchLocal = localStorage.getItem('search') || '';
-
-  const busqueda = searchShow || searchLocal
-  
-  console.log(busqueda);
+  const busqueda = searchShow  || searchLocal
 
   useEffect(() => {
     dispatch(fetchMoviesAsync(busqueda));
     dispatch(fetchSeriesAsync(busqueda));
-    localStorage.setItem('search', busqueda);
-  }, [searchLocal]);
+    console.log('Entre')
+    localStorage.setItem('search', searchShow);
+  }, [searchShow]);
   
   return (
     <>
@@ -31,8 +29,7 @@ export const Search = () => {
         Object.keys(data).length === 0
         ? <Spinner />
         : <ShowListening />
-      }
-      
+      }      
     </>    
   )
 }

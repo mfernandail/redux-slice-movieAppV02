@@ -4,12 +4,14 @@ import movieApi from '../../api/movieApi';
 
 export const fetchMoviesAsync = createAsyncThunk('movies/fetchMoviesAsync', async(show) => {
   const movieSearch = show || 'Avengers';
+  console.log('peli ',show)
   const response = await movieApi.get(`?apikey=bfca5c2d&s=${movieSearch}&type=movie`);  
   return response.data;
 });
 
 export const fetchSeriesAsync = createAsyncThunk('movies/fetchSeriesAsync', async(show) => {
   const serieSearch = show || 'Friends';
+  console.log('serie ',show)
   const response = await movieApi.get(`?apikey=bfca5c2d&s=${serieSearch}&type=series`);  
   return response.data;
 });
