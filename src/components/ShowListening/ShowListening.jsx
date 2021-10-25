@@ -16,7 +16,7 @@ export const ShowListening = () => {
     showUrl = paramsURL.searchShow;
   }
 
-  const shows = [{title: `04.8 Movies ${showUrl}`, typeShow: movies}, {title: `Series ${showUrl}`, typeShow: series}];
+  const shows = [{title: `05 Movies ${showUrl}`, typeShow: movies}, {title: `Series ${showUrl}`, typeShow: series}];
 
   return (
     <div className="movie-wrapper">

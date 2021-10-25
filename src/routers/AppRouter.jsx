@@ -20,10 +20,12 @@ export const AppRouter = () => {
           <Route
             path="/movie/:imdbid"
             component={Detail}
+            exact
           />
           <Route
             path="/search/:searchShow"
             component={Search}
+            exact
           />          
           <Route
             path="/"
