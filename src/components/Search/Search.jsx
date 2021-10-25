@@ -4,13 +4,15 @@ import { useParams } from 'react-router';
 import { fetchSeriesAsync, fetchMoviesAsync, getAllMovies } from '../../redux/movies/movieSlice';
 import { ShowListening } from '../../components/ShowListening/ShowListening';
 import { InputSearch } from '../inputSearch/InputSearch';
-import './Search.css';
 import { Spinner } from '../Spinner/Spinner';
+import './Search.css';
 
 export const Search = () => {
   const {searchShow} = useParams();
   const dispatch = useDispatch();
   const data = useSelector(getAllMovies);
+
+  console.log(searchShow)
 
   useEffect(() => {
     dispatch(fetchMoviesAsync(searchShow));

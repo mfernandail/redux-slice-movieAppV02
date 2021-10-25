@@ -8,11 +8,10 @@ import { fetchMoviesAsync, fetchSeriesAsync } from '../redux/movies/movieSlice';
 
 export const RoutesList = () => {
   const dispatch = useDispatch();
-  const {searchShow = ''} = useParams();
   
   useEffect(() => {
-    dispatch(fetchMoviesAsync(searchShow))
-    dispatch(fetchSeriesAsync(searchShow))
+    dispatch(fetchMoviesAsync())
+    dispatch(fetchSeriesAsync())
   }, []);
 
   return (
