@@ -12,12 +12,17 @@ export const Search = () => {
   const dispatch = useDispatch();
   const data = useSelector(getAllMovies);
 
-  console.log(searchShow)
+  const searchLocal = localStorage.getItem('search') || '';
+
+  const busqueda = searchShow || searchLocal
+  
+  console.log(busqueda);
 
   useEffect(() => {
-    dispatch(fetchMoviesAsync(searchShow));
-    dispatch(fetchSeriesAsync(searchShow));
-  }, [searchShow]);
+    dispatch(fetchMoviesAsync(busqueda));
+    dispatch(fetchSeriesAsync(busqueda));
+    localStorage.setItem('search', busqueda);
+  }, [searchLocal]);
   
   return (
     <>

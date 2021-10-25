@@ -10,9 +10,6 @@ export const RoutesList = () => {
   const dispatch = useDispatch();
   const {searchShow = ''} = useParams();
   
-
-  console.log(searchShow)
-  
   useEffect(() => {
     dispatch(fetchMoviesAsync(searchShow))
     dispatch(fetchSeriesAsync(searchShow))
@@ -27,7 +24,7 @@ export const RoutesList = () => {
       <Route
         path="/search/:searchShow"
         component={Search}
-        exact
+        // exact
       />          
       <Route
         path="/"
