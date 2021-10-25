@@ -13,11 +13,6 @@ export const Search = () => {
   useEffect(() => {
     dispatch(fetchMoviesAsync(searchShow));
     dispatch(fetchSeriesAsync(searchShow));
-  }, []);
-
-  useEffect(() => {
-    dispatch(fetchMoviesAsync(searchShow));
-    dispatch(fetchSeriesAsync(searchShow));
   }, [searchShow]);
   
   return (

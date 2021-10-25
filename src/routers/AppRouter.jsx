@@ -12,14 +12,19 @@ import { Footer } from '../components/Footer/Footer';
 import { PageNotFound } from '../pages/Error/Error404';
 import { Search } from '../components/Search/Search';
 import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router';
 import { fetchMoviesAsync, fetchSeriesAsync } from '../redux/movies/movieSlice';
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
+  const {searchShow = ''} = useParams();
+
+
   useEffect(() => {
-    dispatch(fetchMoviesAsync());
-    dispatch(fetchSeriesAsync())
+    dispatch(fetchMoviesAsync(searchShow))
+    dispatch(fetchSeriesAsync(searchShow))
   }, [])
+
   return (
     <Router>
       <Header />

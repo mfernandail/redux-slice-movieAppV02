@@ -6,13 +6,13 @@ import { InputSearch } from '../../components/inputSearch/InputSearch';
 import { Spinner } from '../../components/Spinner/Spinner';
 
 export const Home = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const data = useSelector(getAllMovies);
 
-  useEffect(() => {
-    dispatch(fetchMoviesAsync());
-    dispatch(fetchSeriesAsync())
-  }, []);
+  // useEffect(() => {
+  //   dispatch(fetchMoviesAsync());
+  //   dispatch(fetchSeriesAsync())
+  // }, []);
 
   return (
     <>
