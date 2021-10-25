@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,8 +11,15 @@ import { Detail } from '../pages/Detail/Detail';
 import { Footer } from '../components/Footer/Footer';
 import { PageNotFound } from '../pages/Error/Error404';
 import { Search } from '../components/Search/Search';
+import { useDispatch } from 'react-redux';
+import { fetchMoviesAsync, fetchSeriesAsync } from '../redux/movies/movieSlice';
 
 export const AppRouter = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMoviesAsync());
+    dispatch(fetchSeriesAsync())
+  }, [])
   return (
     <Router>
       <Header />
