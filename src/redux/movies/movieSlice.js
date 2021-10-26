@@ -4,20 +4,23 @@ import movieApi from '../../api/movieApi';
 
 export const fetchMoviesAsync = createAsyncThunk('movies/fetchMoviesAsync', async(show) => {
   const movieSearch = show || 'Avengers';
-  // console.log('peli ',show)
   const response = await movieApi.get(`?apikey=bfca5c2d&s=${movieSearch}&type=movie`);  
   return response.data;
 });
 
 export const fetchSeriesAsync = createAsyncThunk('movies/fetchSeriesAsync', async(show) => {
   const serieSearch = show || 'Friends';
-  // console.log('serie ',show)
   const response = await movieApi.get(`?apikey=bfca5c2d&s=${serieSearch}&type=series`);  
   return response.data;
 });
 
-export const fetchShowDetailsAsync = createAsyncThunk('movies/fetchShowDetailsAsync', async(id) => {
-  const response = await movieApi.get(`?apikey=bfca5c2d&i=${id}&Plot=full`);  
+// export const fetchShowDetailsAsync = createAsyncThunk('movies/fetchShowDetailsAsync', async(id) => {
+//   const response = await movieApi.get(`?apikey=bfca5c2d&i=${id}&Plot=full`);  
+//   return response.data;
+// });
+
+export const fetchAsyncMovieOrShowDetail = createAsyncThunk("movies/fetchAsyncMovieOrShowDetail", async (id) => {
+  const response = await movieApi.get(`?apiKey=bfca5c2d&i=${id}&Plot=full`);
   return response.data;
 });
 
@@ -51,8 +54,11 @@ const movieSlice = createSlice({
     [fetchSeriesAsync.fulfilled]: (state, action) => {
       return {...state, series: action.payload}
     },
-    [fetchShowDetailsAsync.fulfilled]: (state, action) => {
-      return {...state, detailShow: action.payload}
+    // [fetchShowDetailsAsync.fulfilled]: (state, action) => {
+    //   return {...state, detailShow: action.payload}
+    // },
+    [fetchAsyncMovieOrShowDetail.fulfilled]: (state, { payload }) => {
+      return { ...state, detailShow: payload };
     },
   }
 });

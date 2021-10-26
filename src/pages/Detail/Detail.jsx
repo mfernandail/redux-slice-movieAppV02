@@ -7,11 +7,8 @@ import { DetailsShow } from '../../components/DetailsShow/DetailsShow';
 import { Spinner } from '../../components/Spinner/Spinner';
 
 export const Detail = () => {
-  const dispatch = useDispatch();
   const {imdbid} = useParams();
-
-  console.log(imdbid) 
-
+  const dispatch = useDispatch();
   const data = useSelector(getAllSelected);
 
   useEffect(() => {
@@ -19,7 +16,7 @@ export const Detail = () => {
     return () => {
       dispatch(removeSelectedShow())
     }
-  }, []);
+  }, [dispatch, imdbid]);
 
   return (
     <>
