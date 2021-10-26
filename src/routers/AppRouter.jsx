@@ -22,11 +22,11 @@ export const AppRouter = () => {
             component={Detail}
             exact
           />
-          <Route
+          {/* <Route
             path="/search/:searchShow"
             component={Search}
             exact
-          />          
+          />           */}
           <Route
             path="/"
             exact

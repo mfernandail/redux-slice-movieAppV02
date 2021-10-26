@@ -14,6 +14,7 @@ export const InputSearch = () => {
   const handleFormSubmit = e => {
     e.preventDefault();  
     history.push(`/?search=${input}`);
+    setInput('');
   }
 
   return (

@@ -8,7 +8,7 @@ import { Spinner } from '../Spinner/Spinner';
 import './Search.css';
 
 export const Search = () => {
-
+  console.log('Hola')
   const {searchShow} = useParams();
   const dispatch = useDispatch();
   const data = useSelector(getAllMovies);
