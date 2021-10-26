@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +9,6 @@ import { Header } from '../components/Header/Header';
 import { Home } from '../pages/Home/Home';
 import { Detail } from '../pages/Detail/Detail';
 import { Footer } from '../components/Footer/Footer';
-import { Search } from '../components/Search/Search';
 
 export const AppRouter = () => {
   return (
@@ -22,11 +21,6 @@ export const AppRouter = () => {
             component={Detail}
             exact
           />
-          {/* <Route
-            path="/search/:searchShow"
-            component={Search}
-            exact
-          />           */}
           <Route
             path="/"
             exact

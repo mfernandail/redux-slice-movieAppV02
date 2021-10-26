@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router';
+import { useLocation } from 'react-router';
 import { getAllMovies, getAllSeries } from '../../redux/movies/movieSlice';
 import { ListOfShow } from '../ListOfShows/ListOfShow';
 import './ShowListening.css';
@@ -9,14 +9,10 @@ export const ShowListening = () => {
   const movies = useSelector(getAllMovies);
   const series = useSelector(getAllSeries);
 
-  const paramsURL = useParams();
-  let showUrl = '';
+  const query = new URLSearchParams(useLocation().search);
+  const querySearch = query.get('search') || '';
 
-  if(paramsURL.searchShow){
-    showUrl = paramsURL.searchShow;
-  }
-
-  const shows = [{title: `05.3 Movies ${showUrl}`, typeShow: movies}, {title: `Series ${showUrl}`, typeShow: series}];
+  const shows = [{title: `05.5 Movies ${querySearch}`, typeShow: movies}, {title: `Series ${querySearch}`, typeShow: series}];
 
   return (
     <div className="movie-wrapper">
