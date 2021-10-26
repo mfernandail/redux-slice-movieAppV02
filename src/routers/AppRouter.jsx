@@ -26,7 +26,7 @@ export const AppRouter = () => {
             exact
             component={Home}
           />
-          <Redirect from="*" to="/" />
+          <Route component={Home} />
         </Switch>
       </div>
       <Footer />
