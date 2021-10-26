@@ -10,6 +10,8 @@ export const Detail = () => {
   const dispatch = useDispatch();
   const {imdbid} = useParams();
 
+  console.log(imdbid) 
+
   const data = useSelector(getAllSelected);
 
   useEffect(() => {
@@ -17,7 +19,7 @@ export const Detail = () => {
     return () => {
       dispatch(removeSelectedShow())
     }
-  }, [imdbid]);
+  }, []);
 
   return (
     <>
