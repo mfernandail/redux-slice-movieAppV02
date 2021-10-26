@@ -12,7 +12,7 @@ export const ShowListening = () => {
   const query = new URLSearchParams(useLocation().search);
   const querySearch = query.get('search') || '';
 
-  const shows = [{title: `05.8 Movies ${querySearch}`, typeShow: movies}, {title: `Series ${querySearch}`, typeShow: series}];
+  const shows = [{title: `Movies ${querySearch}`, typeShow: movies}, {title: `Series ${querySearch}`, typeShow: series}];
 
   return (
     <div className="movie-wrapper">
