@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserHistory as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect
