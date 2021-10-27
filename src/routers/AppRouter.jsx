@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect
@@ -26,7 +26,7 @@ export const AppRouter = () => {
             exact
             component={Home}
           />
-          <Route path="*" component={Home} />
+          {/* <Route path="*" component={Home} /> */}
         </Switch>
       </div>
       <Footer />
