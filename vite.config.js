@@ -1,12 +1,7 @@
-// import { defineConfig } from 'vite'
-// import reactRefresh from '@vitejs/plugin-react-refresh'
-import pluginRewriteAll from 'vite-plugin-rewrite-all';
+import { defineConfig } from 'vite'
+import reactRefresh from '@vitejs/plugin-react-refresh'
 
 // https://vitejs.dev/config/
-// export default defineConfig({
-//   //plugins: [reactRefresh()]
-// })
-
-export default {
-  plugins: [pluginRewriteAll()]
-}
+export default defineConfig({
+  plugins: [reactRefresh()]
+})
