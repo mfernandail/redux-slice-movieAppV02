@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import movieApi from '../../api/movieApi';
-
-const apiKey = import.meta.env.VITE_API_KEY;
+import { apiKey } from '../../../Env';
 
 export const fetchMoviesAsync = createAsyncThunk('movies/fetchMoviesAsync', async(show) => {
   const movieSearch = show || 'Avengers';
