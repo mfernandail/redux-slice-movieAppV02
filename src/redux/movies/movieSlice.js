@@ -4,12 +4,12 @@ import { apiKey } from '../../../Env';
 
 let myApiKey;
 
-console.log(process.env.NODE_ENV )
+console.log(process.env.NODE_ENV)
 
-if (process.env.NODE_ENV === 'development') {
-  myApiKey = apiKey;
+if (process.env.NODE_ENV === 'production') {
+    myApiKey = process.env.VITE_API_KEY;
 } else {
-  myApiKey = process.env.VITE_API_KEY;
+    myApiKey = apiKey;
 }
 
 export const fetchMoviesAsync = createAsyncThunk('movies/fetchMoviesAsync', async(show) => {
