@@ -1,10 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import movieApi from '../../api/movieApi';
-// import { apiKey } from '../../../Env';
 
+// console.log(process.env.NODE_ENV)
 let myApiKey;
-
-console.log(process.env.NODE_ENV)
 
 if (process.env.NODE_ENV === 'production') {
     myApiKey = process.env.VITE_API_KEY;
